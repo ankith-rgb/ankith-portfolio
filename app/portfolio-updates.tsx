@@ -4,6 +4,15 @@ import { useEffect } from "react";
 
 export default function PortfolioUpdates() {
   useEffect(() => {
+    const projectGrid = document.querySelector<HTMLElement>(".projects");
+    if (projectGrid) {
+      projectGrid.style.setProperty(
+        "grid-template-columns",
+        window.innerWidth > 600 ? "repeat(3, minmax(0, 1fr))" : "1fr",
+        "important",
+      );
+    }
+
     const projects = document.querySelectorAll<HTMLElement>("article.project");
     const kroger = projects[1];
     if (kroger && !document.querySelector('[data-project="cargo-core"]')) {
