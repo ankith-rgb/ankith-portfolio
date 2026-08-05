@@ -1,4 +1,0 @@
-/* Keep the ambient background glow continuous instead of clipping it inside the hero. */
-.hero {
-  overflow: visible;
-}
