@@ -49,3 +49,51 @@
   line-height: 1.55;
   white-space: pre-line;
 }
+
+/* Clean section labels: retain the title, remove decorative numbering. */
+#about .eyebrow,
+#experience .eyebrow,
+#skills .eyebrow,
+#projects .eyebrow,
+.credentials .eyebrow,
+#contact .eyebrow {
+  font-size: 0;
+}
+
+#about .eyebrow::after,
+#experience .eyebrow::after,
+#skills .eyebrow::after,
+#projects .eyebrow::after,
+.credentials .eyebrow::after,
+#contact .eyebrow::after {
+  font-size: 11px;
+  letter-spacing: 1.3px;
+}
+
+#about .eyebrow::after { content: "ABOUT"; }
+#experience .eyebrow::after { content: "EXPERIENCE"; }
+#skills .eyebrow::after { content: "TOOLKIT"; }
+#projects .eyebrow::after { content: "SELECTED WORK"; }
+.credentials .eyebrow::after { content: "CREDENTIALS"; }
+#contact .eyebrow::after { content: "GET IN TOUCH"; }
+
+/* Remove decorative numbering from skill and project cards. */
+.skill-card small,
+.project-header > span {
+  display: none;
+}
+
+.project-header > svg {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+@media (min-width: 1000px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project {
+    min-height: 470px;
+  }
+}
