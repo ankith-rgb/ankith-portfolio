@@ -3,6 +3,7 @@ import "./globals.css";
 import "./overrides.css";
 import LinkFix from "./link-fix";
 import ProjectCardSizer from "./project-card-sizer";
+import ExperienceEnhancements from "./experience-enhancements";
 
 export const metadata: Metadata = {
   title: "Ankith S | Quality Engineer",
@@ -12,5 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" suppressHydrationWarning><body><LinkFix /><ProjectCardSizer />{children}</body></html>;
+  return <html lang="en" suppressHydrationWarning><body><LinkFix /><ProjectCardSizer /><ExperienceEnhancements />{children}</body></html>;
 }
